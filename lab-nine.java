@@ -3,6 +3,14 @@ import java.util.Arrays;
 
 public class Lab9 {
 	
+	static public void output(int quantity, char c) {
+		 if (quantity > 1) {
+			 System.out.println("Symbol '" + c + "' repeats " + quantity + " times");
+		 } else {
+			 System.out.println("Every symbol in the line is unique.");
+		 }
+	}
+	
 	static public int checkFreq(String s) {
 		char[] arr = s.toCharArray();
         Arrays.sort(arr);
@@ -20,12 +28,8 @@ public class Lab9 {
                 count = 1;
             }
         }
-        if (max > 1) {
-            System.out.println("Symbol " + c + " repeats " + max + " times");
-        } else {
-        	System.out.println("Every symbol in the line is unique.");
-        	}
-            return max;
+        output(max, c);
+        return max;
     }
 
 	public static void main(String[] args) {
