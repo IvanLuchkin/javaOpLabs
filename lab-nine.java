@@ -13,23 +13,23 @@ public class Lab9 {
 
 	static public int checkFreq(String s) {
 		char[] arr = s.toCharArray();
-        Arrays.sort(arr);
+		Arrays.sort(arr);
         int count = 1;
         int max = 0;
         char c = 0;
         for (int i = 1; i < arr.length; i++) {
-            if (arr[i] == arr[i - 1]) {
-                count++;
-                if (count > max) {
-                    c = arr[i];
-                    max = count;
-                }
+        	if (arr[i] == arr[i - 1]) {
+            	count++;
+            	if (count > max) {
+            		c = arr[i];
+            		max = count;
+            	}
             } else {
             	count = 1;
             }
         }
-        output(max, c);
-        return max;
+	output(max, c);
+	return max;
     }
 
 	public static void main(String[] args) {
